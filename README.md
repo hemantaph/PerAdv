@@ -3,28 +3,29 @@ Eccentric wave model development and playground
 
 # Install git-lfs
 for linux: \
-$ sudo apt-get install git-lfs 
+$ sudo apt-get install git-lfs \
 for mac: \
-brew install git-lfs 
-for ligo-cluster: it should be already install \
+brew install git-lfs \
+for ligo-cluster: it should be already install 
 
 # git clone 
-$ git clone https://github.com/hemantaph/PerAdv.git 
+$ git clone https://github.com/hemantaph/PerAdv.git \
 or \
-$ git clone git@github.com:hemantaph/PerAdv.git 
+$ git clone git@github.com:hemantaph/PerAdv.git \
 then \
-$ cd PerAdv 
+$ cd PerAdv \
 $ git lfs pull 
 
 # unzip files 
-$ unzip bilby.zip 
+$ unzip bilby.zip \
 $ unzip lalsuite.zip 
 
 # create an evironment with the right dependencies 
-Make sure you are already in anaconda (base) environment \
-### create an env using lalsuite yml file \
+Make sure you are already in anaconda (base) environment 
+
+### create an env using lalsuite yml file 
 Go to cloned repository, PerAdv. Then, change the env name in the yml file to something simple like 'lal' \
-$ nano lalsuite/common/conda/environment.yml 
+$ nano lalsuite/common/conda/environment.yml \
 or  \
 $ vim lalsuite/common/conda/environment.yml 
 
@@ -36,19 +37,19 @@ $ conda activate lal
 
 # Intalling Bilby 
 this bilby contain chages in bilby/gw/source.py file \
-$ cd bilby 
-$ pip install -r requirements.txt 
+$ cd bilby \
+$ pip install -r requirements.txt \
 $ pip install .
 
 # installing lalsuite 
-$ ./00boot 
-$ ./configure --prefix=${HOME}/lalsuite-install 
-$ make clean && make && make install 
+$ ./00boot \
+$ ./configure --prefix=${HOME}/lalsuite-install \
+$ make clean && make && make install \
 This will create a folder in your home directory. Link lalsuite to your env. \
-$ . ${HOME}/lalsuite-install/etc/lalsuite-user-env.sh 
+$ . ${HOME}/lalsuite-install/etc/lalsuite-user-env.sh \
 $ export C_INCLUDE_PATH="${HOME}/lalsuite-install/include:$C_INCLUDE_PATH" 
 
-## error handling in installing lalsuite \
+## error handling in installing lalsuite 
 It there is c or c++ dependency problem add these lines in bashrc \
 $ nano ~/.bashrc \
 or \
@@ -72,7 +73,7 @@ $ python
 >>> lal.__file__ 
 
 you should see file location of lalsimulation and it should be inside the created lalsuite-install directory. \
-Now call a custom waveform from bilby, \
+Now call a custom waveform from bilby, 
 >>> import bilby 
 >>> import numpy as np 
 >>> bilby.gw.source.lal_PerAdvFD(np.array([20,30,40]), 6.5, 5.8, 0.1, 200, 0.4, 1.3) 
@@ -81,18 +82,18 @@ if it doesn't run go back to the bilby folder and install it again \
 $ pip install . 
 
 # Test folder 
-Acess the test folder and use the jupyter files for various testing with the custom waveform model. \
+Access the test folder and use the jupyter files for various testing with the custom waveform model. 
 
 # running jupyter lab in cluster
 open env \
-$ conda activate lal
-$ . ${HOME}/lalsuite-install/etc/lalsuite-user-env.sh 
+$ conda activate lal \
+$ . ${HOME}/lalsuite-install/etc/lalsuite-user-env.sh \
 $ export C_INCLUDE_PATH="${HOME}/lalsuite-install/include:$C_INCLUDE_PATH" 
 
 install jupyter lab \
-$ conda install -c conda-forge jupyterlab 
+$ conda install -c conda-forge jupyterlab \
 add password \
-$ jupyter lab password 
+$ jupyter lab password \
 
 next, run jupyter lab in chosen port, say port=8889 \
 $  jupyter lab --no-browser --port=8889 
