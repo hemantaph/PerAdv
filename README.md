@@ -55,7 +55,7 @@ $ nano ~/.bashrc \
 or \
 $ vim ~/.bashrc
 
-add these lines, \
+add these lines,
 
 export CC=gcc \
 export CXX=g++ \
@@ -93,7 +93,7 @@ $ export C_INCLUDE_PATH="${HOME}/lalsuite-install/include:$C_INCLUDE_PATH"
 install jupyter lab \
 $ conda install -c conda-forge jupyterlab \
 add password \
-$ jupyter lab password \
+$ jupyter lab password 
 
 next, run jupyter lab in chosen port, say port=8889 \
 $  jupyter lab --no-browser --port=8889 
