@@ -2,7 +2,7 @@
 Eccentric wave model development and playground
 
 # Install git-lfs
-for linux: sudo apt-get install git-lfs
+for linux: sudo apt-get install git-lfs \
 for mac: brew install git-lfs
 for ligo-cluster: it should be already install
 
