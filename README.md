@@ -50,7 +50,7 @@ $ export C_INCLUDE_PATH="${HOME}/lalsuite-install/include:$C_INCLUDE_PATH"
 
 ## error handling in installing lalsuite \
 It there is c or c++ dependency problem add these lines in bashrc \
-$ nano ~/.bashrc
+$ nano ~/.bashrc \
 or \
 $ vim ~/.bashrc
 
@@ -60,7 +60,7 @@ export CC=gcc \
 export CXX=g++ \
 export LC_ALL=C \
 LC_CTYPE=en_US.UTF-8 \
-LC_ALL=en_US.UTF-8 \
+LC_ALL=en_US.UTF-8 
 
 # testing lalsimulation and bilby 
 Check your python is from the right env \
