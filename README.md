@@ -85,7 +85,7 @@ $ pip install .
 Access the test folder and use the jupyter files for various testing with the custom waveform model. 
 
 # running jupyter lab in cluster
-open env \
+in the cluster, open env and link to lalsuite \
 $ conda activate lal \
 $ . ${HOME}/lalsuite-install/etc/lalsuite-user-env.sh \
 $ export C_INCLUDE_PATH="${HOME}/lalsuite-install/include:$C_INCLUDE_PATH" 
